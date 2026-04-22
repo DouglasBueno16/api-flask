@@ -10,6 +10,8 @@ Objetivo será ter uma api simples, para ser utilizado com estudo para:
 
 ## Instalação
 
-`pip install -r requirements.txt`
+```bash
+pip install -r requirements.txt
+```
 
 ## Ainda em construção
