@@ -45,6 +45,13 @@ def get_user(user_id: int):
 		return jsonify({"error": "User not found"}), 404
 	return jsonify(user), 200
 
+@app.route("/delete/<int:user_id>", methods=["DELETE"])
+def delete_user(user_id: int):
+	user = _find_user(user_id)
+	if not user:
+		return jsonify({"error": "User not found"}), 404
+	users.remove(user)
+	return jsonify({"message": f"Usuário {user['id']}:{user['name']} foi deletado"}), 200
 
 if __name__ == "__main__":
 	app.run(host="0.0.0.0", port=5000, debug=True)
