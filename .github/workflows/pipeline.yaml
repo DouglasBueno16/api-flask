@@ -5,7 +5,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  dispatch:
+  workflow_dispatch:
     branches: [ "main" ]
 
 jobs:
