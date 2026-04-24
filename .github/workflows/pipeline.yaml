@@ -47,7 +47,7 @@ jobs:
       - name: Docker build
         run: |
           echo "Deploying application..."
-          docker build -t api-flask:latest .
+          docker build -t douglasbueno/api-flask:latest .
       
       - name: Docker push
         run: |
