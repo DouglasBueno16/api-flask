@@ -8,13 +8,13 @@ RUN if [ -f requirements.txt ]; then \
         fi
 
 # Final stage to run the application
-FROM python:3.12-slim
+FROM python:3.12-alpine
 COPY --from=builder /usr/local/lib/python3.12/site-packages /usr/local/lib/python3.12/site-packages
 WORKDIR /app
 COPY . .
 
 # Set non-root user for security
-RUN useradd -m appuser
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 USER appuser
 EXPOSE 5000
 
