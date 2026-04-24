@@ -51,4 +51,4 @@ jobs:
       
       - name: Docker push
         run: |
-          docker push api-flask:latest
+          docker push douglasbueno/api-flask:latest
