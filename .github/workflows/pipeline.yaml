@@ -28,7 +28,7 @@ jobs:
 
       - name: Run tests
         run: |
-          python test-api.py
+          python test_api.py
 
   deploy:
     needs: test
