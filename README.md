@@ -24,9 +24,3 @@ curl -X POST http://localhost:5000/users \
 ```
 5. Listar usuário com `localhost:5000/users`
 6. Deletar usuário `localhost:5000/delete/<id do usuário>`
-
-## Próximos passos
-
-- Adicionar um banco de dados para persistência
-- Alteração no `pipeline.yaml` para enviar a imagem Docker para o Docker Hub
-- Utilizar uma estrutura cloud para a aplicação
